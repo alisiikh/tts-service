@@ -5,13 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.alisiikh</groupId>
-    <artifactId>word-webservice</artifactId>
+    <artifactId>tts-service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
         <source.version>1.8</source.version>
         <target.version>1.8</target.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <resteasy.version>3.1.2.Final</resteasy.version>
     </properties>
 
@@ -24,32 +25,68 @@
         </dependency>
 
         <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxrs</artifactId>
-            <version>${resteasy.version}</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>1.5.13</version>
         </dependency>
 
         <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jackson-provider</artifactId>
-            <version>${resteasy.version}</version>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
         </dependency>
 
         <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxb-provider</artifactId>
-            <version>${resteasy.version}</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
         </dependency>
 
         <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-cdi</artifactId>
-            <version>${resteasy.version}</version>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.0</version>
+        </dependency>
+<!--        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>en_us</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>cmu_us_kal</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>cmu_time_awb</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>cmulex</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>cmutimelex</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mobicents.external.freetts</groupId>
+            <artifactId>cmudict04</artifactId>
+            <version>1.0</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>word-webservice</finalName>
+        <finalName>tts-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
