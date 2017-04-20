@@ -12,7 +12,7 @@ RUN yum -y install glibc.i686
 RUN cd /opt/mbrola \
     && chown -R jboss . \
     && chgrp -R jboss . \
-    && chmod +x ./mbrola
+    && chmod a+x ./mbrola
 
 # modify path to make mbrola accessible
 ENV MBROLA_HOME /opt/mbrola
