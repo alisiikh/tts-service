@@ -12,9 +12,9 @@ import java.util.Set;
  * @author alisiikh
  */
 @ApplicationPath("/api")
-public class TTSRestApp extends Application {
+public class TextToSpeechApplication extends Application {
 
-    public TTSRestApp() {
+    public TextToSpeechApplication() {
         BeanConfig swaggerConfig = new BeanConfig();
         swaggerConfig.setVersion("1.0");
         swaggerConfig.setSchemes(new String[] { "http" });
@@ -29,7 +29,8 @@ public class TTSRestApp extends Application {
         Set<Class<?>> resources = new HashSet<>();
         // app resources
         resources.add(VersionResource.class);
-        resources.add(TTSResource.class);
+        resources.add(FreeTTSResource.class);
+        resources.add(PollyTTSResource.class);
 
         // swagger resources and features
         resources.add(io.swagger.jaxrs.listing.ApiListingResource.class);

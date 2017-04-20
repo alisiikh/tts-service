@@ -20,11 +20,19 @@ public class VersionResource {
     public static final String API_VERSION = "v1";
 
     @Inject
-    private TTSResource ttsResource;
+    private FreeTTSResource freeTTSResource;
 
-    @Path("/tts")
-    public TTSResource getTextToSpeech() {
-        return ttsResource;
+    @Inject
+    private PollyTTSResource pollyTTSResource;
+
+    @Path("/freetts")
+    public FreeTTSResource getFreeTTSResource() {
+        return freeTTSResource;
+    }
+
+    @Path("/pollytts")
+    public PollyTTSResource getPollyTTSResource() {
+        return pollyTTSResource;
     }
 
     @GET
