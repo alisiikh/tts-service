@@ -42,12 +42,78 @@
             <version>3.5</version>
         </dependency>
 
+<!--
+        <dependency>
+            <groupId>com.alisiikh.freetts</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/freetts.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.cmu_time_awb</groupId>
+            <artifactId>cmu_time_awb</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/cmu_time_awb.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.cmu_us_kal</groupId>
+            <artifactId>cmu_us_kal</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/cmu_us_kal.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.cmudict04</groupId>
+            <artifactId>cmudict04</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/cmudict04.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.cmulex</groupId>
+            <artifactId>cmulex</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/cmulex.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.cmutimelex</groupId>
+            <artifactId>cmutimelex</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/cmutimelex.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.en_us</groupId>
+            <artifactId>en_us</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/en_us.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alisiikh.mbrola</groupId>
+            <artifactId>mbrola</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/mbrola.jar</systemPath>
+        </dependency>
+-->
+
         <dependency>
             <groupId>org.mobicents.external.freetts</groupId>
             <artifactId>freetts</artifactId>
             <version>1.0</version>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>org.mobicents.external.freetts</groupId>
             <artifactId>en_us</artifactId>
             <version>1.0</version>
@@ -76,7 +142,7 @@
             <groupId>org.mobicents.external.freetts</groupId>
             <artifactId>cmudict04</artifactId>
             <version>1.0</version>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
