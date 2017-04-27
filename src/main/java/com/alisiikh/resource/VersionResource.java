@@ -25,6 +25,9 @@ public class VersionResource {
     @Inject
     private PollyTTSResource pollyTTSResource;
 
+    @Inject
+    private MaryTTSResource maryTTSResource;
+
     @Path("/freetts")
     public FreeTTSResource getFreeTTSResource() {
         return freeTTSResource;
@@ -33,6 +36,11 @@ public class VersionResource {
     @Path("/pollytts")
     public PollyTTSResource getPollyTTSResource() {
         return pollyTTSResource;
+    }
+
+    @Path("/marytts")
+    public MaryTTSResource getMaryTTSResource() {
+        return maryTTSResource;
     }
 
     @GET

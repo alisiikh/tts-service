@@ -1,9 +1,9 @@
 package com.alisiikh.service;
 
 import com.alisiikh.model.TTSRequest;
+import com.alisiikh.util.TTSUtils;
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
-import com.sun.speech.freetts.audio.JavaStreamingAudioPlayer;
 import com.sun.speech.freetts.audio.SingleFileAudioPlayer;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -13,7 +13,6 @@ import javax.ws.rs.BadRequestException;
 import javax.ws.rs.InternalServerErrorException;
 import java.io.*;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,12 +21,11 @@ import java.util.stream.Stream;
  */
 @ApplicationScoped
 @Named("freeTTSService")
-public class FreeTTSService implements ITTSService {
+public class FreeTTSService implements TTSService {
 
     @Override
     public InputStream transformTextToSpeech(TTSRequest ttsRequest) {
-        String audioFileName = System.getProperty("java.io.tmpdir")
-                + "/output_" + UUID.randomUUID().getMostSignificantBits();
+        String audioFileName = TTSUtils.generateTempFileNameWithoutExt();
 
         SingleFileAudioPlayer player = new SingleFileAudioPlayer(audioFileName, AudioFileFormat.Type.WAVE);
 

@@ -1,7 +1,8 @@
 package com.alisiikh.resource;
 
 import com.alisiikh.model.TTSRequest;
-import com.alisiikh.service.ITTSService;
+import com.alisiikh.service.TTSService;
+import com.alisiikh.util.TTSResourceUtils;
 import org.apache.commons.io.IOUtils;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -18,25 +19,24 @@ import java.io.InputStream;
  * @author alisiikh
  */
 @ApplicationScoped
-public class PollyTTSResource implements ITTSResource {
+public class PollyTTSResource implements TTSResource {
 
     @Inject
     @Named("pollyTTSService")
-    private ITTSService pollyTTSService;
+    private TTSService pollyTTSService;
 
     @Override
     public StreamingOutput convertTextToSpeech(TTSRequest ttsRequest,
-                                               @Context HttpServletResponse response) throws IOException {
+                                               HttpServletResponse response) throws IOException {
         validateTTSRequest(ttsRequest);
 
         InputStream audioStream = pollyTTSService.transformTextToSpeech(ttsRequest);
-
         byte[] audioBytes = IOUtils.toByteArray(audioStream);
+
         response.setHeader("Content-Length", String.valueOf(audioBytes.length));
         response.setHeader("Content-Disposition", "attachment; filename=\"text2speech.mp3\"");
 
-
-        return outputStream -> IOUtils.write(audioBytes, new BufferedOutputStream(outputStream));
+        return TTSResourceUtils.createAudioStreamingOutput(audioBytes);
     }
 
     @Override

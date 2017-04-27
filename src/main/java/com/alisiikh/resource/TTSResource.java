@@ -15,12 +15,12 @@ import java.util.List;
 /**
  * @author alisiikh
  */
-public interface ITTSResource {
+public interface TTSResource {
 
     @POST
     @Produces({MediaType.APPLICATION_OCTET_STREAM})
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    StreamingOutput convertTextToSpeech(TTSRequest TTSRequest,
+    StreamingOutput convertTextToSpeech(TTSRequest ttsRequest,
                                         @Context HttpServletResponse response) throws IOException;
 
     @GET

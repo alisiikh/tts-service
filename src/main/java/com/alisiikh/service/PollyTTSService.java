@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  */
 @ApplicationScoped
 @Named("pollyTTSService")
-public class PollyTTSService implements ITTSService {
+public class PollyTTSService implements TTSService {
 
     private AmazonPollyClient polly;
 

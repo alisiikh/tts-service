@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @author alisiikh
  */
-public interface ITTSService extends Serializable {
+public interface TTSService extends Serializable {
 
     InputStream transformTextToSpeech(TTSRequest ttsRequest);
 
